@@ -18,7 +18,7 @@ def start_setup():
     pytest.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
     pytest.driver.find_element(By.CSS_SELECTOR, 'a[href="/my_pets"]').click()
     # получаем общее количество питомцев
-    counting_pets = pytest.driver.find_element(By.XPATH, '//*[@class=".col-sm-4 left"]').texttext
+    counting_pets = pytest.driver.find_element(By.XPATH, '//*[@class=".col-sm-4 left"]').text
     still_counting_pets = counting_pets.split()
     pytest.pet_count = int(still_counting_pets[2])
     # убеждаемся что питомцев больше 0
